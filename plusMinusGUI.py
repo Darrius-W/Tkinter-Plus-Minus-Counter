@@ -2,4 +2,10 @@ import tkinter as tk
 
 window = tk.Tk() # creates instance of tkinter class
 
+frame1 = tk.Frame(master=window, width=100, height=100, bg='blue') # frame for the whole application
+
+
+
+frame1.pack(fill=tk.BOTH, side=tk.LEFT, expand=True) # frame set to expand and be responsive no matter window size
+
 window.mainloop() # executes the tkinter event loop
