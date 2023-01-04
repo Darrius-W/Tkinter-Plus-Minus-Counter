@@ -3,17 +3,17 @@ import tkinter as tk
 # EVENT HANDLERS
 #----------------------------------------------------------------------
 def increase_res():
-    result = display_lbl['text']
-    result = int(display_lbl['text']) + 1
-    display_lbl['text'] = result
+    result = display_res['text']
+    result = int(display_res['text']) + 1
+    display_res['text'] = result
     
 def decrease_res():
-    if int(display_lbl['text']) <= 0: # if result becomes less than 0
+    if int(display_res['text']) <= 0: # if result becomes less than 0
         pass
     else: # if result is greater than 0
-        result = display_lbl['text']
-        result = int(display_lbl['text']) - 1
-        display_lbl['text'] = result
+        result = display_res['text']
+        result = int(display_res['text']) - 1
+        display_res['text'] = result
 #----------------------------------------------------------------------
     
     
@@ -37,13 +37,13 @@ minus_btn = tk.Button(master=frame1,
 minus_btn.pack(fill=tk.Y, side=tk.LEFT)
 
 # Result display
-display_lbl = tk.Label(master=frame1,
+display_res = tk.Label(master=frame1,
                        text='0',
                        width=12,
                        height=5,
                        bg='yellow',
                        relief=tk.FLAT)
-display_lbl.pack(fill=tk.Y, side=tk.LEFT)
+display_res.pack(fill=tk.Y, side=tk.LEFT)
 
 # Add 1 Button
 add_btn = tk.Button(master=frame1,
@@ -56,7 +56,7 @@ add_btn = tk.Button(master=frame1,
 add_btn.pack(fill=tk.Y, side=tk.LEFT)
 
 # frame set to expand and be responsive no matter window size
-frame1.pack(fill=tk.BOTH, side=tk.LEFT, expand=True)
+frame1.pack(fill=tk.BOTH, side=tk.LEFT)
 
 window.mainloop() # executes the tkinter event loop
 #----------------------------------------------------------------------
