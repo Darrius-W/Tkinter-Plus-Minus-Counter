@@ -1,6 +1,7 @@
 import tkinter as tk
 
 # EVENT HANDLERS
+#----------------------------------------------------------------------
 def increase_res():
     result = display_lbl['text']
     result = int(display_lbl['text']) + 1
@@ -13,25 +14,30 @@ def decrease_res():
         result = display_lbl['text']
         result = int(display_lbl['text']) - 1
         display_lbl['text'] = result
+#----------------------------------------------------------------------
     
     
-
+    
+# MAIN
+#----------------------------------------------------------------------
 window = tk.Tk() # creates instance of tkinter class
+window.resizable(0,0)
 
-frame1 = tk.Frame(master=window, width=100, height=100, bg='blue') # frame for the whole application
+frame1 = tk.Frame(master=window, bg='black') # frame for the whole application
 
 # Minus 1 Button
-minus_btn = tk.Button(master=frame1, text='-', bg='red', command=decrease_res)
-minus_btn.pack(side=tk.LEFT)
+minus_btn = tk.Button(master=frame1, text='-', bg='red', width=10, height=5, command=decrease_res, relief=tk.RAISED)
+minus_btn.pack(fill=tk.Y, side=tk.LEFT)
 
 # Result display
-display_lbl = tk.Label(master=frame1, text='0', bg='yellow')
-display_lbl.pack(side=tk.LEFT)
+display_lbl = tk.Label(master=frame1, text='0', width=10, height=5, bg='yellow', relief=tk.FLAT)
+display_lbl.pack(fill=tk.Y, side=tk.LEFT)
 
 # Add 1 Button
-add_btn = tk.Button(master=frame1, text='+', bg='green', command=increase_res)
-add_btn.pack(side=tk.LEFT)
+add_btn = tk.Button(master=frame1, text='+', bg='green', width=10, height=5, command=increase_res, relief=tk.RAISED)
+add_btn.pack(fill=tk.Y, side=tk.LEFT)
 
 frame1.pack(fill=tk.BOTH, side=tk.LEFT, expand=True) # frame set to expand and be responsive no matter window size
 
 window.mainloop() # executes the tkinter event loop
+#----------------------------------------------------------------------
