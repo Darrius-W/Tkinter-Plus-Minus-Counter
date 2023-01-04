@@ -22,6 +22,7 @@ def decrease_res():
 #----------------------------------------------------------------------
 window = tk.Tk() # creates instance of tkinter class
 window.resizable(0,0)
+window.title('Plus-Minus Counter')
 
 frame1 = tk.Frame(master=window, bg='black') # frame for the whole application
 
