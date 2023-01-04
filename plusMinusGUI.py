@@ -6,7 +6,7 @@ window = tk.Tk() # creates instance of tkinter class
 frame1 = tk.Frame(master=window, width=100, height=100, bg='blue') # frame for the whole application
 
 # Minus 1 Button
-minus_btn = tk.Button(master=frame1, text='-', bg='red')
+minus_btn = tk.Button(master=frame1, text='-', bg='red', command=EH.decrease_res)
 minus_btn.pack(side=tk.LEFT)
 
 # Result display
