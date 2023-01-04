@@ -7,9 +7,12 @@ def increase_res():
     display_lbl['text'] = result
     
 def decrease_res():
-    result = display_lbl['text']
-    result = int(display_lbl['text']) - 1
-    display_lbl['text'] = result
+    if int(display_lbl['text']) <= 0:
+        pass
+    else:
+        result = display_lbl['text']
+        result = int(display_lbl['text']) - 1
+        display_lbl['text'] = result
     
     
 
